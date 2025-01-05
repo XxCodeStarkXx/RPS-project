@@ -6,3 +6,10 @@ function getComputerChoice() {
 
 console.log(getComputerChoice());
 
+//prompt("Rock, Paper, or Scissors?")
+
+function getHumanChoice() {
+     return prompt("Roshambo? Type: Rock, Paper, Scissors");
+}
+
+console.log(getHumanChoice());
