@@ -1,5 +1,8 @@
+let humanScore = 0;
+let computerScore = 0;
+
 function getComputerChoice() {
-    const strings = ["rock", "paper", "scissors"]
+    const strings = ["Rock", "Paper", "Scissors"]
     const randomIndex = Math.floor(Math.random() * strings.length);
     return strings[randomIndex];
 }
