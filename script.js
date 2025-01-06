@@ -42,20 +42,27 @@ function playRound(humanChoice, computerChoice) {
     
 }
 
+function winner() {
+    if (humanScore > computerScore) {
+        return "you win best out of 5"
+    } else if (computerScore > humanScore) {
+        return "you loose best out of 5"
+    } else {
+        return "We tied best out of 5"
+    }
+}
+
 const humanSelection = getHumanChoice();
 
 function  playGame() {
     for(let i = 0; i <= 5; i++) {
         const computerSelection = getComputerChoice();
         console.log(playRound(humanSelection, computerSelection));
+       
 }
-    if (humanScore > computerScore) {
-        return "you win"
-    } else if (computerScore > humanScore) {
-        return "you loose" 
-    } else {
-        return "you tied"
-    }
+    console.log(winner());
 }
 
-console.log(playGame());
+
+
+playGame()
