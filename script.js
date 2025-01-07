@@ -31,15 +31,19 @@ function getHumanChoice() {
 function playRound(humanChoice, computerChoice) {
     console.log(`You picked ${humanChoice}`);
     console.log(`Computer picked ${computerChoice}`);
+    
     if (humanChoice === computerChoice) {
         return "Its a tie";
-    } else if ((humanChoice === "rock" && computerChoice == "scissors") || (humanChoice === "paper" && computerChoice == "rock") || (humanChoice === "scissors" && computerChoice == "paper")) {
+    } else if ((humanChoice === "rock" && computerChoice == "scissors") || 
+               (humanChoice === "paper" && computerChoice == "rock") || 
+               (humanChoice === "scissors" && computerChoice == "paper")) {
         humanScore++
-        return "Player wins";
+        return `Player wins: Player Score is ${humanScore} Computer score is ${computerScore}`;
     } else {
         computerScore++
-        return "Computer wins";
+        return `Computer wins: Computer Score is ${computerScore} Player score is ${humanScore}`;
     }
+    
     
 }
 
