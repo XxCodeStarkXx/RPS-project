@@ -15,6 +15,7 @@ function getComputerChoice() {
 //console.log(getComputerChoice());
 
 
+
 function getHumanChoice() {
     let choice = prompt("Roshambo? Type rock, paper, scissors");
     if (choice === "rock" || choice === "paper" || choice === "scissors")
@@ -52,10 +53,11 @@ function winner() {
     }
 }
 
-const humanSelection = getHumanChoice();
+
 
 function  playGame() {
     for(let i = 0; i <= 5; i++) {
+        const humanSelection = getHumanChoice();
         const computerSelection = getComputerChoice();
         console.log(playRound(humanSelection, computerSelection));
        
